@@ -10,13 +10,13 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(windowWidth, 5100)
   background('white');
   noLoop();
 
   let xStart = 50; // Punto iniziale delle linee sull'asse x
   let y = 100; // Punto iniziale sull'asse y (spazio per titolo e sottotitolo)
-  let lineHeight = 30; // Spaziatura tra linee
+  let lineHeight = 50; // Spaziatura tra linee
   let maxLength = 700; // Lunghezza max linee
 
   // Colori temperatura
