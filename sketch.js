@@ -9,8 +9,8 @@ function preload() {
     'header'
   );
 
-  // Carica il font Raleway
-  ralewayFont = loadFont('https://fonts.gstatic.com/s/raleway/v28/1Ptsg8zYS_SKggPN4iEgvnHyvveLxVvaoQI.woff2');
+  // Carica font
+  //ralewayFont = loadFont('https://fonts.gstatic.com/s/raleway/v28/1Ptsg8zYS_SKggPN4iEgvnHyvveLxVvaoQI.woff2');
 }
 
 function setup() {
@@ -18,8 +18,8 @@ function setup() {
   background('white');
   noLoop();
 
-  // Imposta il font Raleway
-  textFont(ralewayFont);
+  // Imposta font
+  //textFont(ralewayFont);
 
   let xStart = 50; // Punto iniziale delle linee sull'asse x
   let y = 100; // Punto iniziale sull'asse y (spazio per titolo e sottotitolo)
