@@ -1,4 +1,5 @@
 let table;
+let ralewayFont;
 
 function preload() {
   // Carica il file CSV
@@ -7,12 +8,18 @@ function preload() {
     'csv',
     'header'
   );
+
+  // Carica il font Raleway
+  ralewayFont = loadFont('https://fonts.gstatic.com/s/raleway/v28/1Ptsg8zYS_SKggPN4iEgvnHyvveLxVvaoQI.woff2');
 }
 
 function setup() {
-  createCanvas(windowWidth, 5100)
+  createCanvas(windowWidth, 5100);
   background('white');
   noLoop();
+
+  // Imposta il font Raleway
+  textFont(ralewayFont);
 
   let xStart = 50; // Punto iniziale delle linee sull'asse x
   let y = 100; // Punto iniziale sull'asse y (spazio per titolo e sottotitolo)
@@ -26,9 +33,11 @@ function setup() {
   // titolo
   fill(0);
   textAlign(CENTER, CENTER);
+  textStyle(BOLD);
   textSize(24);
   text("Rivers in the World", width / 2, 30); // Titolo principale
   textSize(16);
+  textStyle(NORMAL);
   text("Graphical representation of the world's major rivers", width / 2, 60); // Sottotitolo
 
   // Trova valori massimi e minimi per lunghezza, portata e temperatura
@@ -79,13 +88,13 @@ function setup() {
 
     // nome fiume
     noStroke();
-    textStyle(BOLD)
+    textStyle(BOLD);
     fill(0);
     textAlign(LEFT, CENTER);
     text(riverName, xStart + scaledLength + 10, y);
 
     // temperatura media
-    textStyle(NORMAL)
+    textStyle(NORMAL);
     textSize(12);
     text(`${riverTemp}°C`, xStart + scaledLength + 10, y + 15);
 
